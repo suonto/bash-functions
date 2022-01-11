@@ -14,9 +14,13 @@ function _aws_prompt_info() {
   fi
 }
 
-if [[ "$SHOW_AWS_PROMPT" != false && "$RPROMPT" != *'$(_aws_prompt_info)'* ]]; then
-  RPROMPT='$(_aws_prompt_info)'"$RPROMPT"
-fi
+function aws_prompt() {
+  if [[ "$SHOW_AWS_PROMPT" != false && "$RPROMPT" != *'$(_aws_prompt_info)'* ]]; then
+    RPROMPT='$(_aws_prompt_info)'"$RPROMPT"
+  fi
+}
+aws_prompt
+
 
 function _awsp() {
   local state
