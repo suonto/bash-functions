@@ -10,7 +10,7 @@ Open a new zsh terminal.
 ## Functions
 Function descriptions.
 
-### aswp (aws profile selector)
+### awsp (aws profile selector)
 Adds nice colors and easy profile selection with an intuitive autocomplete. Reads profile data from `~/.aws/config`. Colors and color selections are defined in `aws.sh` function `_aws_prompt_info`.
 
 List by default:
