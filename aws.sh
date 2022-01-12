@@ -48,4 +48,12 @@ function awsp() {
   fi
 }
 
+function awsps() {
+  if [[ "$AWS_PROFILE" != "" ]]; then
+    cat ~/.aws/config | sed -n -e "/$AWS_PROFILE/,/\\[/p" | sed -e '$d'
+  else
+    echo "AWS_PROFILE is unset" >&2
+  fi
+}
+
 compdef _awsp awsp
