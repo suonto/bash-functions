@@ -21,3 +21,6 @@ Colors:
 ![colors](pics/colors.png)
 Mistake detection:
 ![errors](pics/errors.png)
+
+#### Extension awsps (aws profile show)
+Shows all details of the current aws profile.
